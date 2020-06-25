@@ -15,15 +15,20 @@ const Text = styled.Text`
     color: ${Colors.black}
 `
 
-const Button = ({ text, onPress }) => (
-    <Container onPress={onPress}>
-        <Text>{text}</Text>
+const Button = ({ text, onPress, testID }) => (
+    <Container onPress={() => onPress()} testID={testID}>
+        <Text testID="textButton">{text}</Text>
     </Container>
 )
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
     onPress: PropTypes.func.isRequired,
+    testID: PropTypes.string,
+}
+
+Button.defaultProps = {
+    testID: "button",
 }
 
 export default Button

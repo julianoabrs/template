@@ -6,11 +6,11 @@ import { reactotronRedux } from "reactotron-redux"
 const { scriptURL } = NativeModules.SourceCode
 const scriptHostname = scriptURL?.split("://")[1]?.split(":")[0]
 
-const reactotron = __DEV__ ? Reactotron.setAsyncStorageHandler(AsyncStorage) // AsyncStorage would either come from `react-native` or `@react-native-community/async-storage` depending on where you get it from
+const reactotron = __DEV__ ? Reactotron.setAsyncStorageHandler(AsyncStorage)
     .configure({ host: scriptHostname })
-    .useReactNative() // add all built-in react native plugins
+    .useReactNative()
     .use(reactotronRedux())
-    .connect() // let's connect!
+    .connect()
     : null
 
 export default reactotron

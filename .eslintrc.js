@@ -5,6 +5,7 @@ module.exports = {
     },
     plugins: ["react", "jsx-a11y", "import", "react-hooks"],
     extends: ["airbnb", "eslint:recommended"],
+    parser: "babel-eslint",
     rules: {
         "import/no-extraneous-dependencies": ["error", { devDependencies: true, optionalDependencies: false, peerDependencies: false }],
         indent: ["error", 4, { SwitchCase: 1 }],
@@ -30,7 +31,7 @@ module.exports = {
         "no-unused-expressions": ["error", { allowTernary: true }],
         "react/destructuring-assignment": 0,
         "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
-        "max-len": ["error", { code: 120, tabWidth: 4, ignoreUrls: true }],
+        "max-len": ["error", { code: 200, tabWidth: 4, ignoreUrls: true }],
         "object-curly-spacing": ["error", "always", { arraysInObjects: false, objectsInObjects: false }],
         "react-hooks/rules-of-hooks": "error",
         "react/no-unsafe": "error",

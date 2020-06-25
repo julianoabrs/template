@@ -2,9 +2,9 @@ import React from "react"
 import { Container, Title } from "./ThirdScreenStyles"
 import { THIRD_SCREEN } from "~/utils/strings"
 
-const ThirdScreenView = ({}) => (
+const ThirdScreenView = () => (
     <Container>
-        <Title>
+        <Title testID="thirdScreenTitle">
             {THIRD_SCREEN.title}
         </Title>
     </Container>

@@ -2,10 +2,10 @@ import React from "react"
 import { Container, Title, NextScreenButton } from "./FirstScreenStyles"
 import { FIRST_SCREEN } from "~/utils/strings"
 
-const FirstScreenView = ({ goToSecondScreen, isLoading }) => (
+const FirstScreenView = ({ goToSecondScreen }) => (
     <Container>
-        <Title>{`${FIRST_SCREEN.title} ${isLoading}`}</Title>
-        <NextScreenButton text={FIRST_SCREEN.button} onPress={goToSecondScreen} />
+        <Title testID="firstScreenTitle">{`${FIRST_SCREEN.title}`}</Title>
+        <NextScreenButton testID="nextScreenButton" text={FIRST_SCREEN.button} onPress={goToSecondScreen} />
     </Container>
 )
 
