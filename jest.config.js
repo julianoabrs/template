@@ -11,6 +11,6 @@ module.exports = {
         "<rootDir>/src/**/*.test.js",
     ],
     transformIgnorePatterns: [
-        "node_modules/(?!(jest-)?react-native|react-navigation|@react-navigation|@bankify/react-native-animate-number|rn-sliding-up-panel|rn-sliding-up-panel)",
+        "node_modules/(?!(jest-)?react-native|@react-navigation)",
     ],
 }
